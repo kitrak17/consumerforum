@@ -113,6 +113,17 @@ var countrySchema = new Schema({
 });
 var Country = mongoose.model('Country', countrySchema );
 
+var countryData = new Country({
+     name: "India"
+ });
+
+ countryData.save(function(error) {
+     console.log("Your Country has been saved!");
+ if (error) {
+     console.error(error);
+ }
+ });
+
 // User
 var userSchema = new Schema({
     username: String,
