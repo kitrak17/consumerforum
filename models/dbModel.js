@@ -2,9 +2,13 @@ var mongoose = require('mongoose');
 
 //Set up default mongoose connection
 //var mongoDB = 'mongodb://localhost/consumer_forum';
-var mongoDB = 'mongodb://kartik:kitrak123@ds225608.mlab.com:25608/heroku_jl98f91c';
-//mongoose.connect('mongodb://localhost/myappdatabase');
-mongoose.connect(mongoDB, { useNewUrlParser: true });
+if(process.env.ENVIRONMENT == 'DEV') {
+  mongoose.connect('mongodb://localhost/myappdatabase');
+} else if(process.env.ENVIRONMENT == 'STAGE') {
+  mongoose.connect('mongodb://kartik:kitrak123@ds225608.mlab.com:25608/heroku_jl98f91c');
+}
+
+
 // Get Mongoose to use the global promise library
 mongoose.Promise = global.Promise;
 //Get the default connection

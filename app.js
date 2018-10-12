@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var dbModel = require('./models/dbModel');
 var index = require('./routes/index');
 var users = require('./routes/users');
+require('dotenv').config();
 
 var app = express();
 
