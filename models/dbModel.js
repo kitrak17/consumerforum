@@ -1,6 +1,4 @@
 var mongoose = require('mongoose');
-//Set up default mongoose connection
-//var mongoDB = 'mongodb://localhost/consumer_forum';
 if(process.env.ENVIRONMENT == 'DEV') {
   mongoose.connect('mongodb://localhost/consumerforum',{ useNewUrlParser: true });
 } else if(process.env.ENVIRONMENT == 'STAGE') {
