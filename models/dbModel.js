@@ -1,11 +1,12 @@
 var mongoose = require('mongoose');
-
 //Set up default mongoose connection
 //var mongoDB = 'mongodb://localhost/consumer_forum';
 if(process.env.ENVIRONMENT == 'DEV') {
-  mongoose.connect('mongodb://localhost/myappdatabase');
+  mongoose.connect('mongodb://localhost/consumerforum',{ useNewUrlParser: true });
 } else if(process.env.ENVIRONMENT == 'STAGE') {
-  mongoose.connect('mongodb://kartik:kitrak123@ds225608.mlab.com:25608/heroku_jl98f91c');
+  mongoose.connect('mongodb://kartik:kitrak123@ds225608.mlab.com:25608/heroku_jl98f91c',{ useNewUrlParser: true });
+} else if(process.env.ENVIRONMENT == 'PRODUCTION') {
+  mongoose.connect('mongodb://kartik:kitrak123@ds225608.mlab.com:25608/heroku_jl98f91c',{ useNewUrlParser: true });
 }
 
 
@@ -121,12 +122,12 @@ var countryData = new Country({
      name: "India"
  });
 
- countryData.save(function(error) {
-     console.log("Your Country has been saved!");
- if (error) {
-     console.error(error);
- }
- });
+//  countryData.save(function(error) {
+//      console.log("Your Country has been saved!");
+//  if (error) {
+//      console.error(error);
+//  }
+//  });
 
 // User
 var userSchema = new Schema({

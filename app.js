@@ -1,3 +1,4 @@
+require('dotenv').config();
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -7,7 +8,7 @@ var bodyParser = require('body-parser');
 var dbModel = require('./models/dbModel');
 var index = require('./routes/index');
 var users = require('./routes/users');
-require('dotenv').config();
+
 
 var app = express();
 
