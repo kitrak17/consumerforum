@@ -1,0 +1,98 @@
+
+@font-face {
+    font-family: AvertaBold;
+    src: url(fonts/AvertaBold.woff);
+   
+	color:#000000;
+}
+
+
+
+@font-face {
+    font-family: AvertaXtraBold;
+    src: url(fonts/AvertaExtraBold.woff);
+   
+	color:#000000;
+}
+
+@font-face {
+    font-family: AvertaLight;
+    src: url(fonts/AvertaLight.woff);
+   
+	color:#000000;
+}
+
+.font-bold{font-family:AvertaBold;}
+.font-light{font-family:AvertaLight;}
+
+
+
+.bold{font-weight:bold;}
+
+
+
+.m-top10{margin-top:10px;}
+.m-top15{margin-top:15px;}
+.m-top18{margin-top:18px;}
+.centeralign{text-align:center;}
+
+
+
+@media (min-width: 992px){
+.container {
+    max-width: 90%;
+}
+}
+
+@media (max-width: 415px){
+.logo {
+    text-align:center;
+}
+}
+
+
+.content-wrapper{background: #e7f1ea; padding:20px 0px; }
+
+.green-button{ background:#30AF50; color:#fff;}
+.green-button:hover{ background:#259842; }
+.black-button{ background:#24343c; color:#fff;}
+.black-button:hover{ background:#000; }
+
+.header-top{    
+    padding-bottom: 10px; }
+
+
+
+
+
+#custom-search-input{
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+#custom-search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input .glyphicon-search{
+    font-size: 23px;
+}

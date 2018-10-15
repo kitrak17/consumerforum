@@ -1,0 +1,144 @@
+
+{% extends 'layout.twig' %}
+
+{% block body %}
+
+
+
+    <body>
+
+
+
+        <div class="content-wrapper">
+            <div class="container ">
+                <div class="row">
+
+                    <div class="col-md-8 offset-2 "   > 
+
+                        <div class="formbox">  
+
+                            <h2 class="  font-bold greenbg indent-10 color-white" align="center">New Member Registration </h2>
+
+                            <p align="center" class="m-top18">  Already a Consumer Complaints member? <a href="" data-toggle="modal" data-target="#myModal"> Log in now </a>  </p>
+
+                            <div align="center" class="bold">
+                                Connect with           
+                                <a href="#" class="fa fa-facebook"></a>
+                                <a href="#" class="fa fa-twitter"></a>
+                                <a href="#" class="fa fa-google"></a>
+                                <a href="#" class="fa fa-linkedin"></a>
+                                or register
+                            </div>
+
+                            <form class="m-top30 font-light" method="post" action="/customer/registration" onload="Captcha();">
+
+                                <div class="form-group row">
+                                    <div class="col-sm-1"> </div>
+                                    <label for="inputPassword" class="col-sm-3 col-form-label ">Username</label>
+                                    <div class="col-sm-7 ">
+                                        <input id="username" class="form-control " type="text" name="username" placeholder="username" value="{% if customer is defined %}{{ customer.username }}{% endif %}">
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-sm-1"> </div>
+                                    <label for="inputPassword" class="col-sm-3 col-form-label ">Email</label>
+                                    <div class="col-sm-7 ">
+                                        <input id="email" class="form-control " type="email" name="email" placeholder="mail@example.com" value="{% if customer is defined %}{{ customer.email }}{% endif %}">
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-sm-1"> </div>
+                                    <label for="inputPassword" class="col-sm-3 col-form-label ">Password</label>
+                                    <div class="col-sm-7 ">
+                                         <input id="password" class="form-control " type="password" name="password" placeholder="">
+
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                                <div class="form-group row">
+
+
+
+
+                                   <div class="col-sm-1"> </div>
+                                <label for="inputPassword" class="col-sm-3 col-form-label ">Confirmation code</label>
+                                <div class="col-sm-2">
+                                    <input type="text" id="mainCaptcha" name="mainCaptcha" class="form-control-static captcha1" readonly/>
+                                </div>
+                                <div class="col-sm-1">
+                                    <img  src="/images/reload.png" onclick="Captcha();"/>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input  type="text" name="captcha" id="captcha" class="form-control"  placeholder="">
+                                </div>
+                                </div>
+
+                                 {% if errors is defined and errors is not empty %}   
+                                <div class="offset-4 col-sm-8  "> 
+                                    <div id="error" class="error-message" style="width:89%">
+                                        {% for error in errors %}
+                                            <i class='fa fa-circle'></i> {{ error.msg }} <br />
+                                        {% endfor %}
+                                    </div> 
+                                </div>
+                            {% endif %} 
+                                <div class="clearfix">  </div>
+
+                                <div class="form-group row">
+                                    <div class="col-sm-1"> </div>
+                                    <div class="col-sm-10">
+
+                                        <button class="btn green-button btn-lg pull-right m-top15 " type="submit">     Submit </button> 
+
+                                    </div>
+                                </div>
+
+
+                            </form>
+
+
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <script>
+            export default {
+                data() {
+                    return {
+                        placements: [
+                            'topright', 'top', 'topleft',
+                            'bottomright', 'bottom', 'bottomleft',
+                            'righttop', 'right', 'lefttop',
+                            'rightbottom', 'left', 'leftbottom'
+                        ]
+                    }
+                }
+            }
+        </script>
+
+    {% endblock %}
+
+
+
+

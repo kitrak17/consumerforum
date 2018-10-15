@@ -1,4 +1,7 @@
 var mongoose = require('mongoose');
+var findOrCreate = require('mongoose-find-or-create');
+var slug = require('mongoose-slug-generator');
+
 if(process.env.ENVIRONMENT == 'DEV') {
   mongoose.connect('mongodb://localhost/consumerforum',{ useNewUrlParser: true });
 } else if(process.env.ENVIRONMENT == 'STAGE') {
@@ -21,14 +24,11 @@ const ObjectId = Schema.Types.ObjectId
 
 // Business 
 var businessSchema = new Schema({
-    business_name: String,
+    business_name: { type : String , unique : true, required : true, index: true },
+    slug: { type: String, slug: "business_name" }, 
     category_id: [{
         type: ObjectId,
         ref: 'Category' 
-      }],
-    sub_category_id: [{
-        type: ObjectId,
-        ref: 'SubCategory' 
       }],
     address: String,
     city:  [{
@@ -43,42 +43,52 @@ var businessSchema = new Schema({
         type: ObjectId,
         ref: 'Country' 
       }],
-    pincode: String,
+    pincode: Number,
     website: String,
     email: String,
     phone_number: String,
     logo: String,
-    verified: Number,
-    claimed: Number,
+    verified: Boolean,
+    claimed: Boolean,
     claimed_by: [{
         type: ObjectId,
         ref: 'User' 
       }],
-    active: Number,
+    active: Boolean,
     created_at: { type : Date },
     updated_at: { type : Date, default: Date.now }
 });
+businessSchema.plugin(slug);
 var Business = mongoose.model('Business', businessSchema );
 
 // Category
 var categorySchema = new Schema({
-    category_name: String,
+    category_name: { type:String,  unique : true },
+    slug: { type: String, slug: "category_name" },
+    parent_id :  [{
+      type: ObjectId,
+      ref: 'Category'
+    }],
     created_at: { type : Date },
     updated_at: { type : Date, default: Date.now }
 });
+categorySchema.plugin(findOrCreate);
+categorySchema.plugin(slug);
 var Category = mongoose.model('Category', categorySchema );
 
 // Sub Category
-var subCategorySchema = new Schema({
-    sub_category_name: String,
-    category_id: [{
-        type: ObjectId,
-        ref: 'Category'
-      }],
-      created_at: { type : Date },
-      updated_at: { type : Date, default: Date.now }
-});
-var SubCategory = mongoose.model('SubCategory', subCategorySchema );
+// var subCategorySchema = new Schema({
+//     sub_category_name: String,
+//     slug: { type: String, slug: "sub_category_name" },
+//     category_id: [{
+//         type: ObjectId,
+//         ref: 'Category'
+//       }],
+//       created_at: { type : Date },
+//       updated_at: { type : Date, default: Date.now }
+// });
+// subCategorySchema.plugin(slug);
+// var SubCategory = mongoose.model('SubCategory', subCategorySchema );
 
 // City
 var citySchema = new Schema({
@@ -94,6 +104,7 @@ var citySchema = new Schema({
       created_at: { type : Date },
       updated_at: { type : Date, default: Date.now }
 });
+citySchema.plugin(findOrCreate);
 var City = mongoose.model('City', citySchema );
 
 // State
@@ -106,6 +117,7 @@ var stateSchema = new Schema({
       created_at: { type : Date },
       updated_at: { type : Date, default: Date.now }
 });
+stateSchema.plugin(findOrCreate);
 var State = mongoose.model('State', stateSchema );
 
 // Country
@@ -114,18 +126,8 @@ var countrySchema = new Schema({
     created_at: { type : Date },
     updated_at: { type : Date, default: Date.now }
 });
+countrySchema.plugin(findOrCreate);
 var Country = mongoose.model('Country', countrySchema );
-
-var countryData = new Country({
-     name: "India"
- });
-
-//  countryData.save(function(error) {
-//      console.log("Your Country has been saved!");
-//  if (error) {
-//      console.error(error);
-//  }
-//  });
 
 // User
 var userSchema = new Schema({
@@ -158,3 +160,11 @@ var userSchema = new Schema({
     updated_at: { type : Date, default: Date.now }
 });
 var User = mongoose.model('User', userSchema );
+
+module.exports = {
+Category:Category,
+City:City,
+State:State,
+Country:Country,
+Business:Business
+};

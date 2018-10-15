@@ -1,0 +1,175 @@
+{% extends 'layout.twig' %}
+
+
+{% block body %}
+
+
+
+
+    <div class="content-wrapper">
+        <div class="container ">
+            <div class="row">
+
+                <div class="col-md-9 m-top18"   > 
+
+                    <h2 class="font-bold"> {{ pageTitle }} </h2>
+
+                    <div class=" m-top21 font-light font-18">
+                        <header class=" tab-bg-dark-navy-blue m-top18 ">
+                            <ul class="nav nav-tabs">
+                                <li {% if pageTitle == "Recent Complaints" %} class="active" {% endif %} >
+                                    <a href="/">Recent Complaints</a>
+                                </li>
+                                <li {% if pageTitle == "Most Replied" %} class="active" {% endif %} >
+                                    <a href="/complaint/mostreplied">Most replied</a>
+                                </li>
+                                <li {% if pageTitle == "Recently Replied" %} class="active" {% endif %} >
+                                    <a href="/complaint/recentlyreplied">Recently replied</a>
+                                </li>
+                                <li {% if pageTitle == "Not Replied" %} class="active" {% endif %} >
+                                    <a href="/complaint/notreplied">Not replied</a>
+                                </li>
+                            </ul>
+                        </header>
+
+                        <div class="tab-content">
+                            <div id="home" class="tab-pane active">
+                                {% include 'complaintlisting.twig' %}
+                            </div>
+                        </div>
+
+                        {% include 'pagination.twig' %}
+
+
+
+                                
+                                
+                    </div>
+
+
+                </div>
+
+
+                <div class="col-md-3">
+
+                    <div class="fb-box m-top92">
+
+                        <div id="fb-root "></div>
+                        <script>(function (d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0];
+                                if (d.getElementById(id))
+                                    return;
+                                js = d.createElement(s);
+                                js.id = id;
+                                js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12';
+                                fjs.parentNode.insertBefore(js, fjs);
+                            }(document, 'script', 'facebook-jssdk'));</script>
+
+                        <div class="fb-like  " data-href="https://www.facebook.com/Gayle-The-Predator-744687735572131/" data-layout="button_count" 
+                             data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+
+
+
+
+                    </div>
+
+
+                    <div class="twitter-box m-top10">
+
+                        <a href="https://twitter.com/henrygayle?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="true">Follow @henrygayle</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+                    </div>
+
+                    <div class="g-pluse m-top10" style="padding-top:14px;">
+                        <!-- Place this tag in your head or just before your close body tag. -->
+                        <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+                        <!-- Place this tag where you want the widget to render. -->
+                        <div  class="g-follow" data-annotation="bubble" data-height="24" data-href="//plus.google.com/u/0/107981003118080061247" data-rel="publisher"></div>
+
+
+
+                    </div>
+
+
+                    <div class="formbox">   
+                        <h4 class="font-bold"> Featured Complaints  </h4>
+
+                        <div class="complaint-img ">
+                            <img src="/images/1200px-Channel_1_Israel_DSC0021.jpg" alt="Norway" style="width:100%;"  />
+                            <div class="centered font-bold ">Hi, i want to unsubscribe this service. i unknowingly </div>
+                        </div>
+
+                        <div class="complaint-img ">
+                            <img src="/images/1200px-Channel_1_Israel_DSC0021.jpg" alt="Norway" style="width:100%;"  />
+                            <div class="centered font-bold ">Hi, i want to unsubscribe this service. i unknowingly </div>
+                        </div>
+
+
+
+                    </div>
+
+
+                    <div class="formbox">   
+                        <h4 class="font-bold"> Recently Discussed  </h4>
+                        <p class="font-light gray-color"> (1 minutes ago) </p>
+                        <a class="color-green" href="#">  Ziwra </a>
+                        <p class="font-light">  wrong product delivered.. not able to return it.  </p>
+                        <div class="gray-boarder">  </div>
+
+
+                        <p class="font-light gray-color"> (5 minutes ago) </p>
+                        <a class="color-green" href="#">  Home Credit India Finance </a>
+                        <p class="font-light">  home credit c. no 3801125387 disbursed amount has not credited </p>
+                        <div class="gray-boarder">  </div>
+
+
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+                            export default {
+                                data() {
+                                    return {
+                                        placements: [
+                                            'topright', 'top', 'topleft',
+                                            'bottomright', 'bottom', 'bottomleft',
+                                            'righttop', 'right', 'lefttop',
+                                            'rightbottom', 'left', 'leftbottom'
+                                        ]
+                                    }
+                                }
+                            }
+
+
+
+
+    </script>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

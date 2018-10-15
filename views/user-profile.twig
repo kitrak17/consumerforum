@@ -1,0 +1,750 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+
+
+
+   
+
+
+    <div class="content-wrapper">
+        <div class="container ">
+            <div class="row">
+
+                <div class="col-md-9 m-top18"   > 
+
+
+                    <div class="row formbox">
+
+
+
+                        <div class="col-md-12"> 
+
+                            <div class="fill">   <h3 class="font-bold"> moni1234567 </h3>  </div>  
+
+
+
+
+                            <p class="color-green">  30 Reputation points </p>
+
+                            <button type="button" class="btn btn-light disabled ">Complaints <span class="badge">7</span></button>
+                            <button type="button" class="btn btn-light disabled ">Comments <span class="badge">3</span></button> 
+
+                            <a href="#"  data-toggle="modal" data-target="#myModal2">    <button class="btn btn-warning   pull-right" >   <i class="fa fa-envelope"></i>    Send Message   </button> </a> 
+                        </div>
+
+
+
+                        <div class="col-md-3">
+
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+                    <div class=" m-top21 font-light font-18">
+                        <header class=" tab-bg-dark-navy-blue m-top18 ">
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a data-toggle="tab" href="#home">Profile</a>
+                                </li>
+                                <li class="">
+                                    <a data-toggle="tab" href="#about">Badges</a>
+                                </li>
+                                <li class="">
+                                    <a data-toggle="tab" href="#profile">Reputation</a>
+                                </li>
+                                <li class="">
+                                    <a data-toggle="tab" href="#contact">Top users</a>
+                                </li>
+                            </ul>
+                        </header>
+
+                        <div class="tab-content">
+                            <div id="home" class="tab-pane active ">
+
+                                <div class="complaint-box ">	
+                                    <div class="row">	
+
+                                        <div class="col-md-6 "> 
+                                            <h3>  moni1234567 - Profile </h3>
+                                            <div class="gray-boarder m-top15"> </div>
+
+                                            <div>
+                                                <button type="button" class="btn btn-light disabled color-green "><i class="fa fa-calendar"></i></button> 
+                                                <span class="font16"> Member since 14th of Mar, 2008  </span>
+                                            </div>
+
+                                            <div class="m-top10">
+                                                <button type="button" class="btn btn-light disabled color-green "><i class="fa fa-location-arrow"></i></button> 
+                                                <span class="font16"> India </span>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-6 "> 
+                                            <h3> Activity statistics </h3>
+                                            <div class="gray-boarder m-top15"> </div>
+
+
+
+
+                                            <div class="line-chart">
+                                                <div class="aspect-ratio">
+                                                    <canvas id="chart"></canvas>
+                                                </div>
+                                            </div>   
+
+
+
+                                        </div>
+
+
+                                        <div class="col-md-12 "> 
+
+
+                                            <h3>  Posting summary </h3>
+                                            <div class="gray-boarder m-top15"> </div>
+
+                                            <section class="panel">
+                                                <header class="panel-heading tab-bg-dark-navy-blue tab-right ">
+                                                    <ul class="nav nav-tabs pull-right">
+                                                        <li class="active">
+                                                            <a data-toggle="tab" href="#home-3" class="tab2">
+                                                                <i class="fa fa-list"></i> All 
+                                                            </a>
+                                                        </li>
+                                                        <li class="">
+                                                            <a data-toggle="tab" href="#about-3" class="tab2">
+                                                                <i class="fa fa-book"></i>
+                                                                Complaints
+                                                            </a>
+                                                        </li>
+                                                        <li class="">
+                                                            <a data-toggle="tab" href="#contact-3" class="tab2">
+                                                                <i class="fa fa-comments"></i>
+                                                                Comments 
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="">
+                                                            <a data-toggle="tab" href="#contact-4" class="tab2">
+                                                                <i class="fa fa-question"></i>
+                                                                Questions 
+                                                            </a>
+                                                        </li>
+
+                                                    </ul>
+                                                </header>
+                                                <div class="panel-body">
+                                                    <div class="tab-content">
+                                                        <div id="home-3" class="tab-pane active">
+
+                                                            <div class="m-top21 font16">
+
+                                                                <i class="fa fa-book"></i>
+                                                                <label class="m-top10"> <a href=""> The Coca Cola Company - Asking help to other </a> </label>
+                                                                <label class="pull-right"> 5 days ago </label>
+                                                                <div class="gray-boarder m-top15"> </div>
+
+
+                                                                <i class="fa fa-book"></i>
+                                                                <label class="m-top10"> <a href=""> Anti-Terrorist - Illegal transaction detected by the f. B. I </a> </label>
+                                                                <label class="pull-right"> 5 days ago </label>
+                                                                <div class="gray-boarder m-top15"> </div>
+
+                                                                <i class="fa fa-comments"></i>
+                                                                <label class="m-top10"> <a href=""> Us Customs And Border Protection - Important information for you </a> </label>
+                                                                <label class="pull-right"> 5 days ago </label>
+                                                                <div class="gray-boarder m-top15"> </div>
+
+
+                                                                <i class="fa fa-question"></i>
+                                                                <label class="m-top10"> <a href=""> Lottery & Sms Fraud Scam - Beware - Lottery & sms fraud scam - beware </a> </label>
+                                                                <label class="pull-right"> 5 days ago </label>
+                                                                <div class="gray-boarder m-top15"> </div>
+
+
+                                                                <i class="fa fa-comments"></i>
+                                                                <label class="m-top10"> <a href=""> The Coca Cola Company - Asking help to other </a> </label>
+                                                                <label class="pull-right"> 5 days ago </label>
+                                                                <div class="gray-boarder m-top15"> </div>
+
+
+
+
+                                                            </div>
+
+                                                        </div>
+                                                        <div id="about-3" class="tab-pane">
+
+                                                            <div class="m-top21 font16">
+
+
+                                                                <i class="fa fa-book"></i>
+                                                                <label class="m-top10"> <a href=""> The Coca Cola Company - Asking help to other </a> </label>
+                                                                <label class="pull-right"> 5 days ago </label>
+                                                                <div class="gray-boarder m-top15"> </div>
+
+
+                                                                <i class="fa fa-book"></i>
+                                                                <label class="m-top10"> <a href=""> Anti-Terrorist - Illegal transaction detected by the f. B. I </a> </label>
+                                                                <label class="pull-right"> 5 days ago </label>
+                                                                <div class="gray-boarder m-top15"> </div>
+
+
+
+
+
+                                                            </div>
+
+                                                        </div>
+                                                        <div id="contact-3" class="tab-pane">
+
+                                                            <div class="m-top21 font16">
+
+                                                                <i class="fa fa-comments"></i>
+                                                                <label class="m-top10"> <a href=""> The Coca Cola Company - Asking help to other </a> </label>
+                                                                <label class="pull-right"> 5 days ago </label>
+                                                                <div class="gray-boarder m-top15"> </div>
+
+                                                                <i class="fa fa-comments"></i>
+                                                                <label class="m-top10"> <a href=""> Us Customs And Border Protection - Important information for you </a> </label>
+                                                                <label class="pull-right"> 5 days ago </label>
+                                                                <div class="gray-boarder m-top15"> </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                        <div id="contact-4" class="tab-pane">
+
+                                                            <div class="m-top21 font16">
+
+                                                                <i class="fa fa-question"></i>
+                                                                <label class="m-top10"> <a href=""> Lottery & Sms Fraud Scam - Beware - Lottery & sms fraud scam - beware </a> </label>
+                                                                <label class="pull-right"> 5 days ago </label>
+                                                                <div class="gray-boarder m-top15"> </div>
+
+                                                            </div>
+
+                                                        </div>
+
+
+                                                        <ul class="pagination pull-right">
+                                                            <li class="page-item "><a class="page-link" href="#">Previous</a></li>
+                                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                                        </ul>
+
+
+                                                    </div>
+                                                </div>
+                                            </section>
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div id="about" class="tab-pane">
+
+                                <div class="complaint-box m-top18">
+                                    <div class="row">
+
+                                        <div class="col-md-12"> 
+                                            <h3  class="font-regular "> <a href="complaint-page.html"> Samsung India — misguided by ditributor and also the service engineer of samsung company. </a> </h3>
+
+                                            <p class=" font-14 ">  <a href="user-profile.html"> Ramu S </a>   Mar 1, 2018 
+                                                <span data-original-title="Verified Company" data-content="Country Club India Customer Care Service available " data-placement="top" data-trigger="hover" class="fa fa-check color-white pull-right green-round popovers  "></span> 
+                                            </p>
+                                            <div class="gray-boarder m-top25"> </div>
+                                            <p class="font16 "> My name is shaikh tanveer and i was badly screwed from hr manpreet and shradda even they played with my emotion ...
+                                                They called me for interview and not took anything they degraded me as i am graduate and done iata ...
+                                                I was badly screwed by them and left with nothing i always wish to take my revenge on them i will not leave with this insult and i want... </p>
+
+                                            <div class="gray-boarder m-top25"> </div>
+
+                                            <div class="row color-green font-14 ">
+                                                <div class="col-md-4"> 
+                                                    <a href="#"> <i class="fa fa-comments"></i> Read comments  </a>
+                                                </div>
+
+                                                <div class="col-md-4" align="center"> 
+                                                    <a href="#"> <i class="fa fa-globe"></i> India  </a>
+                                                </div>
+
+                                                <div class="col-md-4" align="right"> 
+                                                    <a href="#"> <i class="fa fa-sticky-note"></i> Airlines  </a>
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                            <div id="profile" class="tab-pane">
+
+                                <div class="complaint-box m-top18">
+                                    <div class="row">
+
+                                        <div class="col-md-12"> 
+
+                                            <h3>  15 510 Reputation points </h3>
+                                            <div class="gray-boarder m-top15"> </div>
+
+
+
+                                            <div class="m-top21 font16">
+
+                                                <label class="m-right-10 color-green"> +550 </label>
+                                                <label class="m-top10 m-right-10 ">  80 days ago  </label>
+
+                                                <button type="button" class="btn btn-light btn-sm disabled color-green     "> 12 </button>
+                                                <button type="button" class="btn btn-light  color-green pull-right clickme m-right-10 "> Open <i class="fa fa-arrows-v"></i> Close </button>
+                                                <div class="show-content box ">
+
+                                                    <div class="opened-list"> 
+                                                        <label class="color-green m-right-10">  +50	 </label>
+                                                        <label class="m-right-10">  80 days ago </label>
+                                                        <span class="label label-default pull-right">Notable complaint </span>
+
+
+                                                    </div>
+
+
+                                                    <div class="opened-list"> 
+                                                        <label class="color-green m-right-10">  +50	 </label>
+                                                        <label class="m-right-10">  80 days ago </label>
+
+                                                        <span class="label  label-info pull-right">Popular complaint</span>
+
+                                                    </div>
+
+
+                                                    <div class="opened-list"> 
+                                                        <label class="color-green m-right-10">  +50	 </label>
+                                                        <label class="m-right-10">  80 days ago </label>
+
+                                                        <span class="label label-default pull-right">Notable complaint </span>
+
+                                                    </div>
+
+
+                                                </div>
+
+
+
+
+                                                <div class="gray-boarder m-top15"> </div>
+
+                                                <!-- End  --> 
+
+
+                                                <label class="m-right-10 color-green"> +345 </label>
+                                                <label class="m-top10 m-right-10 "> 129 days ago </label>
+
+                                                <button type="button" class="btn btn-light btn-sm disabled color-green     "> 12 </button>
+                                                <button type="button" class="btn btn-light  color-green pull-right clickme m-right-10 "> Open <i class="fa fa-arrows-v"></i> Close </button>
+                                                <div class="show-content box ">
+
+                                                    <div class="opened-list"> 
+                                                        <label class="color-green m-right-10">  +50	 </label>
+                                                        <label class="m-right-10">  80 days ago </label>
+                                                        <span class="label label-default pull-right">Notable complaint </span>
+
+
+                                                    </div>
+
+
+                                                    <div class="opened-list"> 
+                                                        <label class="color-green m-right-10 color-green">  +50	 </label>
+                                                        <label class="m-right-10">  80 days ago </label>
+
+                                                        <span class="label label-default pull-right">Notable complaint </span>
+
+                                                    </div>
+
+
+                                                    <div class="opened-list"> 
+                                                        <label class="color-green m-right-10">  +50	 </label>
+                                                        <label class="m-right-10">  80 days ago </label>
+
+                                                        <span class="label label-default pull-right">Notable complaint </span>
+
+                                                    </div>
+
+
+                                                </div>
+
+
+
+
+                                                <div class="gray-boarder m-top15"> </div>
+
+                                                <!-- End  --> 
+
+
+
+                                                <label class="m-right-10 color-green"> +456 </label>
+                                                <label class="m-top10 m-right-10 "> 153 days ago </label>
+
+                                                <button type="button" class="btn btn-light btn-sm disabled color-green     "> 12 </button>
+                                                <button type="button" class="btn btn-light  color-green pull-right clickme m-right-10 "> Open <i class="fa fa-arrows-v"></i> Close </button>
+                                                <div class="show-content box ">
+
+                                                    <div class="opened-list"> 
+                                                        <label class="color-green m-right-10">  +50	 </label>
+                                                        <label class="m-right-10">  80 days ago </label>
+                                                        <span class="label label-default pull-right">Notable complaint </span>
+
+
+                                                    </div>
+
+
+                                                    <div class="opened-list"> 
+                                                        <label class="color-green m-right-10">  +50	 </label>
+                                                        <label class="m-right-10">  80 days ago </label>
+
+                                                        <span class="label  label-info pull-right">Popular complaint</span>
+
+                                                    </div>
+
+
+                                                    <div class="opened-list"> 
+                                                        <label class="color-green m-right-10">  +50	 </label>
+                                                        <label class="m-right-10">  80 days ago </label>
+
+                                                        <span class="label label-default pull-right">Notable complaint </span>
+
+                                                    </div>
+
+
+                                                </div>
+
+
+
+
+                                                <div class="gray-boarder m-top15"> </div>
+
+                                                <!-- End  --> 
+
+
+
+                                                <ul class="pagination pull-right">
+                                                    <li class="page-item "><a class="page-link" href="#">Previous</a></li>
+                                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                                </ul>
+
+
+
+                                                <script>
+
+                                                // Hide all the elements in the DOM that have a class of "box"
+                                                    $('.box').hide();
+
+                                                // Make sure all the elements with a class of "clickme" are visible and bound
+                                                // with a click event to toggle the "box" state
+                                                    $('.clickme').each(function () {
+                                                        $(this).show(0).on('click', function (e) {
+                                                            // This is only needed if your using an anchor to target the "box" elements
+                                                            e.preventDefault();
+
+                                                            // Find the next "box" element in the DOM
+                                                            $(this).next('.box').slideToggle('fast');
+                                                        });
+                                                    });
+
+
+                                                </script> 
+
+
+
+
+                                            </div>
+
+
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+                            <div id="contact" class="tab-pane">
+
+                                <div class="complaint-box m-top18">
+                                    <div class="row">
+
+                                        <div class="col-md-12"> 
+                                            <h3  class="font-regular "> <a href="complaint-page.html"> Samsung India — misguided by ditributor and also the service engineer of samsung company. </a> </h3>
+
+                                            <p class=" font-14 ">  <a href="user-profile.html"> Ramu S </a>   Mar 1, 2018 
+                                                <span data-original-title="Verified Company" data-content="Country Club India Customer Care Service available " data-placement="top" data-trigger="hover" class="fa fa-check color-white pull-right green-round popovers  "></span> 
+                                            </p>
+                                            <div class="gray-boarder m-top25"> </div>
+                                            <p class="font16 "> My name is shaikh tanveer and i was badly screwed from hr manpreet and shradda even they played with my emotion ...
+                                                They called me for interview and not took anything they degraded me as i am graduate and done iata ...
+                                                I was badly screwed by them and left with nothing i always wish to take my revenge on them i will not leave with this insult and i want... </p>
+
+                                            <div class="gray-boarder m-top25"> </div>
+
+                                            <div class="row color-green font-14 ">
+                                                <div class="col-md-4"> 
+                                                    <a href="#"> <i class="fa fa-comments"></i> Read comments  </a>
+                                                </div>
+
+                                                <div class="col-md-4" align="center"> 
+                                                    <a href="#"> <i class="fa fa-globe"></i> India  </a>
+                                                </div>
+
+                                                <div class="col-md-4" align="right"> 
+                                                    <a href="#"> <i class="fa fa-sticky-note"></i> Airlines  </a>
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+
+                <div class="col-md-3 m-top18">
+
+                    <div class="fb-box m-top18 ">
+
+                        <div id="fb-root "></div>
+                        <script>(function (d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0];
+                                if (d.getElementById(id))
+                                    return;
+                                js = d.createElement(s);
+                                js.id = id;
+                                js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12';
+                                fjs.parentNode.insertBefore(js, fjs);
+                            }(document, 'script', 'facebook-jssdk'));</script>
+
+                        <div class="fb-like  " data-href="https://www.facebook.com/Gayle-The-Predator-744687735572131/" data-layout="button_count" 
+                             data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+
+
+
+
+                    </div>
+
+
+                    <div class="twitter-box m-top10">
+
+                        <a href="https://twitter.com/henrygayle?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="true">Follow @henrygayle</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+                    </div>
+
+                    <div class="g-pluse m-top10" style="padding-top:14px;">
+                        <!-- Place this tag in your head or just before your close body tag. -->
+                        <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+                        <!-- Place this tag where you want the widget to render. -->
+                        <div  class="g-follow" data-annotation="bubble" data-height="24" data-href="//plus.google.com/u/0/107981003118080061247" data-rel="publisher"></div>
+
+
+
+                    </div>
+
+
+                    <div class="formbox">   
+                        <h4 class="font-bold"> Featured Complaints  </h4>
+
+                        <div class="complaint-img ">
+                            <img src="/images/1200px-Channel_1_Israel_DSC0021.jpg" alt="Norway" style="width:100%;"  />
+                            <div class="centered font-bold ">Hi, i want to unsubscribe this service. i unknowingly </div>
+                        </div>
+
+                        <div class="complaint-img ">
+                            <img src="/images/1200px-Channel_1_Israel_DSC0021.jpg" alt="Norway" style="width:100%;"  />
+                            <div class="centered font-bold ">Hi, i want to unsubscribe this service. i unknowingly </div>
+                        </div>
+
+
+
+                    </div>
+
+
+                    <div class="formbox">   
+                        <h4 class="font-bold"> Recently Discussed  </h4>
+                        <p class="font-light gray-color"> (1 minutes ago) </p>
+                        <a class="color-green" href="#">  Ziwra </a>
+                        <p class="font-light">  wrong product delivered.. not able to return it.  </p>
+                        <div class="gray-boarder">  </div>
+
+
+                        <p class="font-light gray-color"> (5 minutes ago) </p>
+                        <a class="color-green" href="#">  Home Credit India Finance </a>
+                        <p class="font-light">  home credit c. no 3801125387 disbursed amount has not credited </p>
+                        <div class="gray-boarder">  </div>
+
+
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+   
+
+    <script>
+       export default {
+           data() {
+               return {
+                   placements: [
+                       'topright', 'top', 'topleft',
+                       'bottomright', 'bottom', 'bottomleft',
+                       'righttop', 'right', 'lefttop',
+                       'rightbottom', 'left', 'leftbottom'
+                   ]
+               }
+           }
+       }
+
+
+
+
+    </script>
+
+
+    <script>
+
+
+        var chart = document.getElementById('chart').getContext('2d'),
+                gradient = chart.createLinearGradient(0, 0, 0, 450);
+
+        gradient.addColorStop(0, '#00AE4D');
+        gradient.addColorStop(0.5, '#00AE4D');
+        gradient.addColorStop(1, '#00AE4D');
+
+
+        var data = {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+            datasets: [{
+                    label: 'Custom Label Name',
+                    backgroundColor: gradient,
+                    pointBackgroundColor: 'white',
+                    borderWidth: 1,
+                    borderColor: '#00AE4D',
+                    data: [50, 55, 80, 81, 54, 50]
+                }]
+        };
+
+
+        var options = {
+            responsive: true,
+            maintainAspectRatio: true,
+            animation: {
+                easing: 'easeInOutQuad',
+                duration: 520
+            },
+            scales: {
+                xAxes: [{
+                        gridLines: {
+                            color: '#00AE4D',
+                            lineWidth: 1
+                        }
+                    }],
+                yAxes: [{
+                        gridLines: {
+                            color: '#E8E8E8',
+                            lineWidth: 1
+                        }
+                    }]
+            },
+            elements: {
+                line: {
+                    tension: 0.4
+                }
+            },
+            legend: {
+                display: false
+            },
+            point: {
+                backgroundColor: 'white'
+            },
+            tooltips: {
+                titleFontFamily: 'Open Sans',
+                backgroundColor: 'rgba(0,0,0,0.3)',
+                titleFontColor: 'white',
+                caretSize: 5,
+                cornerRadius: 2,
+                xPadding: 10,
+                yPadding: 10
+            }
+        };
+
+
+        var chartInstance = new Chart(chart, {
+            type: 'line',
+            data: data,
+            options: options
+        });
+
+    </script>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
